@@ -21,10 +21,6 @@
     .nav-icon{
         margin-top: 10px;
     }
-
-    .navbar-fixed{
-        margin-bottom: 10px;
-    }
 </style>
 <body class="yellow lighten-4">
 
