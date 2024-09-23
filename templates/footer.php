@@ -22,8 +22,9 @@
     <footer class="page-footer gradient">
         <div class="row">
             <!-- logo -->
-            <div class="col l3 s12 push-l1">
-                <img width="150px" src="./img/logo.png" alt="logo" class="responsive-img brand-logo">
+            <div class="col l3 s12 push-l1 center-on-small-only">
+                <img width="150px" src="./img/logo.png" alt="logo" class="responsive-img brand-logo hide-on-med-and-down">
+                <img width="150px" src="./img/logo.png" alt="logo" class="responsive-img center brand-logo hide-on-large-only">
                 <p class="warm-gray"> The company Lorem ipsum dolor sit ami gretani lorem adipisicing elit.</p>
             </div>
             <!-- Explore -->

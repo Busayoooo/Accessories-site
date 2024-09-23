@@ -19,24 +19,24 @@
         background-color: #d4af37 !important;
 }
 
-.gold-text{
-  color: #d4af37 !important;
+    .gold-text{
+        color: #d4af37 !important;
 }
 
-.creamy-white{
-  background-color: #fdf3e7 !important;
+    .creamy-white{
+    background-color: #fdf3e7 !important;
 }
 
-.creamy-white-text{
-  color: #fdf3e7 !important;
+    .creamy-white-text{
+        color: #fdf3e7 !important;
 }
 
-.charcoal{
-  color: #333333 !important;
+    .charcoal{
+        color: #333333 !important;
 }
 
-.warm-gray{
-  color: #7d7d7d !important;
+    .warm-gray{
+        color: #7d7d7d !important;
 }
 
     .brand-logo{
@@ -53,6 +53,10 @@
     .nav-icon{
         margin-top: 10px;
     }
+
+    .mobile_logo{
+        margin-bottom: 50px;
+    }
 </style>
 <body class="creamy-white">
 
@@ -63,7 +67,8 @@
             <nav class="z-depth-2 nav-wrapper blush-pink">
                 <div class="container">
                     <div class="row">
-                        <a href="index.php" class="brand-logo"><img width="70px" src="./img/logo.png" alt="" class="responsive-img"></a>
+                        <a href="index.php" class="brand-logo hide-on-med-and-down"><img width="70px" src="./img/logo.png" alt="" class="responsive-img"></a>
+                        <a href="index.php" class="brand-logo hide-on-large-only mobile_logo"><img width="55px" src="./img/logo.png" alt="" class="responsive-img"></a>
                         <a href="#sidenav" class="sidenav-trigger creamy-white-text"><i class="material-icons">menu</i></a>
 
                         <ul class="right hide-on-med-and-down">

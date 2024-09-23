@@ -218,9 +218,9 @@ if (isset($_POST['submit'])) {
             <div class="row">
                 <div class="col s12 l6">
                     <h3 class=" blush-pink-text">Want to have a custom piece made?</h3>
-                    <p class="flow-text">Click the button below to reach out to us 👇</p>
-                    <a href="" class= "hide-on-med-and-down blush-pink yellow-text text-lighten-4 btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
-                    <a class= "hide-on-large-only right blush-pink yellow-text text-lighten-4 btn btn-large left hoverable">Call us Now<i class="right material-icons">phone</i></a>
+                    <p class=" warm-gray flow-text">Click the button below to reach out to us 👇</p>
+                    <a href="" class= "hide-on-med-and-down blush-pink creamy-white-text btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
+                    <a class= "hide-on-large-only right blush-pink creamy-white-text btn btn-large left hoverable">Call us Now<i class="right material-icons">phone</i></a>
                 </div>
                 <div class="col s12 l6">
                     <form action="index.php" method="post">
@@ -242,7 +242,7 @@ if (isset($_POST['submit'])) {
                         </div>
                         <br>
                         <div class="center">
-                            <input class="btn btn-large pink accent-1 yellow-text text-lighten-4 center" type="submit" name="submit" id="submit" value="Send">
+                            <input class="btn btn-large pink accent-1 creamy-white-text center" type="submit" name="submit" id="submit" value="Send">
                         </div>
                     </form> 
                 </div>
@@ -257,22 +257,22 @@ if (isset($_POST['submit'])) {
                     <ul class="collection">
                         <li class="collection-item avatar">
                             <i class="material-icons circle pink accent-1">person</i>
-                            <h6 class="pink-text text-accent-1 bold-text">Ryan Kingfisher</h6>
-                            <i><p class="grey-text ">"In life there will be road blocks but we will over come it. Hammock talk come soon. Let's see what chef Dee got that they don't want us to eat "</p></i> 
+                            <h6 class="charcoal bold-text">Ryan Kingfisher</h6>
+                            <i><p class="warm-gray">"In life there will be road blocks but we will over come it. Hammock talk come soon. Let's see what chef Dee got that they don't want us to eat "</p></i> 
                         </li>
                         <li class="collection-item avatar">
                             <i class="material-icons circle pink accent-1">person</i>
-                            <h6 class="pink-text text-accent-1 bold-text">Jessica Ulman</h6>
-                            <i><p class="grey-text ">"In life there will be road blocks but we will over come it. Hammock talk come soon. Let's see what chef Dee got that they don't want us to eat "</p></i> 
+                            <h6 class="charcoal bold-text">Jessica Ulman</h6>
+                            <i><p class="warm-gray">"In life there will be road blocks but we will over come it. Hammock talk come soon. Let's see what chef Dee got that they don't want us to eat "</p></i> 
                         </li>
                         <li class="collection-item avatar">
                             <i class="material-icons circle pink accent-1">person</i>
-                            <h6 class="pink-text text-accent-1 bold-text">Olubenga Taiwo</h6>
-                            <i><p class="grey-text ">"In life there will be road blocks but we will over come it. Hammock talk come soon. Let's see what chef Dee got that they don't want us to eat "</p></i> 
+                            <h6 class="charcoal bold-text">Olubenga Taiwo</h6>
+                            <i><p class="warm-gray">"In life there will be road blocks but we will over come it. Hammock talk come soon. Let's see what chef Dee got that they don't want us to eat "</p></i> 
                         </li>
                     </ul>
-                    <a href="review_form.php" class="btn btn-large btn-flat pink accent-1 left yellow-text text-lighten-4">Leave a review</a>
-                    <a href="" class="btn btn-large btn-flat pink accent-1 right yellow-text text-lighten-4">More reviews</a>
+                    <a href="review_form.php" class="btn btn-large btn-flat pink accent-1 left creamy-white-text">Leave a review</a>
+                    <a href="" class="btn btn-large btn-flat pink accent-1 right creamy-white-text">More reviews</a>
                 </div>
             </div>
         </div>
