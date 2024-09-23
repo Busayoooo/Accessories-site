@@ -7,6 +7,38 @@
     <title>Chic Charms</title>
 </head>
 <style>
+    .blush-pink{
+        background-color: #ff98bc !important;
+}
+
+    .blush-pink-text{
+        color: #ff98bc !important;
+}
+
+    .gold{
+        background-color: #d4af37 !important;
+}
+
+.gold-text{
+  color: #d4af37 !important;
+}
+
+.creamy-white{
+  background-color: #fdf3e7 !important;
+}
+
+.creamy-white-text{
+  color: #fdf3e7 !important;
+}
+
+.charcoal{
+  color: #333333 !important;
+}
+
+.warm-gray{
+  color: #7d7d7d !important;
+}
+
     .brand-logo{
         margin-top: 8px;
     }
@@ -22,24 +54,24 @@
         margin-top: 10px;
     }
 </style>
-<body class="yellow lighten-4">
+<body class="creamy-white">
 
     <!-- header -->
 
     <header>
         <div class="navbar-fixed ">
-            <nav class="z-depth-2 nav-wrapper pink accent-1">
+            <nav class="z-depth-2 nav-wrapper blush-pink">
                 <div class="container">
                     <div class="row">
                         <a href="index.php" class="brand-logo"><img width="70px" src="./img/logo.png" alt="" class="responsive-img"></a>
-                        <a href="#sidenav" class="sidenav-trigger yellow-text text-lighten-4"><i class="material-icons">menu</i></a>
+                        <a href="#sidenav" class="sidenav-trigger creamy-white-text"><i class="material-icons">menu</i></a>
 
                         <ul class="right hide-on-med-and-down">
                             <li class="nav-icon">
-                                <a href="" class="  yellow-text text-lighten-4"><i class="large material-icons">account_circle</i></a>
+                                <a href="" class="creamy-white-text"><i class="large material-icons">account_circle</i></a>
                             </li>
                             <li class="nav-icon">
-                                <a href="" class="yellow-text text-lighten-4"><i class="large material-icons">shopping_cart</i></a>
+                                <a href="" class="creamy-white-text"><i class="large material-icons">shopping_cart</i></a>
                             </li>
                         </ul>
                     </div>
@@ -47,46 +79,46 @@
             </nav>
         </div>
         <ul id="sidenav" class="sidenav">
-        <h5>Type</h5>
+        <h5 class="charcoal">Type</h5>
             <ul>
                 <li>
-                    <a href="" class="black-text">Bracelets</a>
+                    <a href="" class="warm-gray">Bracelets</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Earrings</a>
+                    <a href="" class="warm-gray ">Earrings</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Rings</a>
+                    <a href="" class="warm-gray">Rings</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Necklaces</a>
+                    <a href="" class="warm-gray">Necklaces</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Headbands</a>
+                    <a href="" class="warm-gray">Headbands</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Hair Clips</a>
+                    <a href="" class="warm-gray">Hair Clips</a>
                 </li>
             </ul>
-        <h5>Color</h5>
+        <h5 class="charcoal">Color</h5>
             <ul>
                 <li>
-                    <a href="" class="black-text">Blue</a>
+                    <a href="" class="warm-gray">Blue</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Red</a>
+                    <a href="" class="warm-gray">Red</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">White</a>
+                    <a href="" class="warm-gray">White</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Black</a>
+                    <a href="" class="warm-gray">Black</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Pink</a>
+                    <a href="" class="warm-gray">Pink</a>
                 </li>
                 <li>
-                    <a href="" class="black-text">Multicolor</a>
+                    <a href="" class="warm-gray">Multicolor</a>
                 </li>
             </ul>
         </ul>
