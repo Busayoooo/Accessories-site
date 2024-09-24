@@ -3,16 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Chic Charms</title>
 </head>
 <style>
-    .brand-logo{
-        margin-left: 50px;
-    }
+    
 
     .page-footer .footer-copyright {
         justify-content: center;
         align-items: center;
     }
+    
+</style>
+
 </style>
 <body>
     <footer class="page-footer blush-pink">

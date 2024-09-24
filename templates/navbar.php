@@ -2,11 +2,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Chic Charms</title>
 </head>
+
 <style>
+    .brand-logo{
+        margin-left: 50px;
+    }
+
     .blush-pink{
         background-color: #ff4d88 !important;
 }
@@ -58,6 +64,7 @@
         margin-bottom: 50px;
     }
 </style>
+
 <body class="creamy-white">
 
     <!-- header -->
@@ -128,13 +135,4 @@
             </ul>
         </ul>
     </header>
-    
-    <script src="js/jquery.js"></script>
-    <script src="js/materialize.js"></script>
-    <script>
-        $(document).ready(function(){
-        $('.carousel').carousel();
-        $('.slider').slider();
-        $('.sidenav').sidenav();
-        });
-    </script>
+</body>

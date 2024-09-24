@@ -1,5 +1,5 @@
 <?php
-include("./templates/header.php");
+include("./templates/navbar.php");
 include("./templates/connect.php");
 
 //write the fetch query

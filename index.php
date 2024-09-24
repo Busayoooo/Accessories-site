@@ -1,6 +1,6 @@
 <?php 
 
-include("./templates/header.php");
+include("./templates/navbar.php");
 include("./templates/connect.php");
 
 $name = "";
@@ -118,7 +118,7 @@ if (isset($_POST['submit'])) {
 <br> <br>
         <div class="container">
         <div class="row center">
-            <h1 class="gold-text bold-text">Deals of The Day</h1>
+            <h1 class=" blush-pink-text bold-text">Deals of The Day</h1>
             <div class="col l4 s6">
                 <div class="card hoverable">
                     <div class="card-image">
