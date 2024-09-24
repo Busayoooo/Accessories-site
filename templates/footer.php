@@ -52,7 +52,7 @@
                 <h4 class="charcoal">Contact Us</h4>
                 <ul>
                     <li>
-                        <a href="" class=" charcoal">+2349031138739</a>
+                        <a href="tel:+2349031138739" class=" charcoal"> <i class="material-icons">phone</i> +2349031138739</a>
                     </li>
                     <li>
                         <a href="" class="charcoal">chiccharms@gmail.com</a>
@@ -61,7 +61,7 @@
                         <a href="" class="charcoal">Chic_Charms</a>
                     </li>
                     <li>
-                        <a href="" class="charcoal">09031138739</a>
+                        <a href="https://wa.me/09031138739" class="charcoal">whatsapp</a>
                     </li>
                 </ul>
             </div>

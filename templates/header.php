@@ -64,7 +64,7 @@
 
     <header>
         <div class="navbar-fixed ">
-            <nav class="z-depth-2 nav-wrapper blush-pink">
+            <nav class="z-depth-0 nav-wrapper blush-pink">
                 <div class="container">
                     <div class="row">
                         <a href="index.php" class="brand-logo hide-on-med-and-down"><img width="70px" src="./img/logo.png" alt="" class="responsive-img"></a>

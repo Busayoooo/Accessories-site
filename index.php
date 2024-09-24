@@ -116,6 +116,7 @@ if (isset($_POST['submit'])) {
 
         <!-- Deal of the day -->
 <br> <br>
+        <div class="container">
         <div class="row center">
             <h1 class="gold-text bold-text">Deals of The Day</h1>
             <div class="col l4 s6">
@@ -162,8 +163,10 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
+        </div>
 
         <!-- Our Most Popular Items -->
+        <div class="container">
         <div class="row center">
             <h1 class="blush-pink-text bold-text">Our Most Popular Items</h1>
             <div class="col l4 hide-on-med-and-down">
@@ -210,6 +213,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
+        </div>
 
         <!-- custom section -->
         <div class="container">
@@ -239,8 +243,8 @@ if (isset($_POST['submit'])) {
                             <label for="description">The custom piece description</label>
                         </div>
                         <br>
-                        <div class="center">
-                            <input class="btn btn-large blush-pink creamy-white-text center" type="submit" name="submit" id="submit" value="Send">
+                        <div class="center input-field">
+                            <input class="btn btn-large blush-pink creamy-white-text center" type="submit" name="submit" id="submit" value="Send" >
                         </div>
                     </form> 
                 </div>
