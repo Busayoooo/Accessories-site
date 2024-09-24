@@ -8,19 +8,19 @@
 </head>
 <style>
     .blush-pink{
-        background-color: #ff98bc !important;
+        background-color: #ff4d88 !important;
 }
 
     .blush-pink-text{
-        color: #ff98bc !important;
+        color: #ff4d88 !important;
 }
 
     .gold{
-        background-color: #d4af37 !important;
+        background-color: #f7cd45 !important;
 }
 
     .gold-text{
-        color: #d4af37 !important;
+        color: #f7cd45 !important;
 }
 
     .creamy-white{
