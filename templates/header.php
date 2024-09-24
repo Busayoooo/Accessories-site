@@ -57,55 +57,69 @@
     .mobile_logo{
         margin-bottom: 50px;
     }
+    .nav_link{
+        transition: all .2s;
+    }
+    .nav_link:hover{
+        border-bottom: 3px solid #ff4d88;
+        background-color: transparent;
+    }
 </style>
-<body class="creamy-white">
+<body class="white">
 
     <!-- header -->
 
     <header>
         <div class="navbar-fixed ">
-            <nav class="z-depth-0 nav-wrapper blush-pink">
+            <nav class="z-depth-0 nav-wrapper white">
                 <div class="container">
                     <div class="row">
-                        <a href="index.php" class="brand-logo hide-on-med-and-down"><img width="70px" src="./img/logo.png" alt="" class="responsive-img"></a>
+                        <a href="index.php" class="brand-logo hide-on-med-and-down pink-text left">Chic & Chocs</a>
                         <a href="index.php" class="brand-logo hide-on-large-only mobile_logo"><img width="55px" src="./img/logo.png" alt="" class="responsive-img"></a>
                         <a href="#sidenav" class="sidenav-trigger creamy-white-text"><i class="material-icons">menu</i></a>
+                        
 
                         <ul class="right hide-on-med-and-down">
                             <li class="nav-icon">
-                                <a href="" class="creamy-white-text"><i class="large material-icons">account_circle</i></a>
+                                <a href="" class="pink-text nav_link"><i class=" material-icons left ">home</i>Home</a>
                             </li>
                             <li class="nav-icon">
-                                <a href="" class="creamy-white-text"><i class="large material-icons">shopping_cart</i></a>
+                                <a href="" class="pink-text nav_link"><i class="material-icons left ">shopping_cart</i>Cart</a>
+                            </li>
+                            <li class="nav-icon">
+                                <a href="" class="pink-text nav_link"><i class=" material-icons left ">person</i>Account</a>
                             </li>
                         </ul>
+                        <div class="divider"></div>
                     </div>
                 </div>
             </nav>
         </div>
         <ul id="sidenav" class="sidenav">
-        <h5 class="charcoal">Type</h5>
-            <ul>
-                <li>
-                    <a href="" class="warm-gray">Bracelets</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray ">Earrings</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Rings</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Necklaces</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Headbands</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Hair Clips</a>
-                </li>
-            </ul>
-        <h5 class="charcoal">Color</h5>
+            <div class="container">
+                <h5 class="charcoal">Type</h5>
+                    <ul>
+                        <li>
+                            <a href="" class="warm-gray">Bracelets</a>
+                        </li>
+                        <li>
+                            <a href="" class="warm-gray ">Earrings</a>
+                        </li>
+                        <li>
+                            <a href="" class="warm-gray">Rings</a>
+                        </li>
+                        <li>
+                            <a href="" class="warm-gray">Necklaces</a>
+                        </li>
+                        <li>
+                            <a href="" class="warm-gray">Headbands</a>
+                        </li>
+                        <li>
+                            <a href="" class="warm-gray">Hair Clips</a>
+                        </li>
+                    </ul>
+            </div>
+            <h5 class="charcoal">Color</h5>
             <ul>
                 <li>
                     <a href="" class="warm-gray">Blue</a>
