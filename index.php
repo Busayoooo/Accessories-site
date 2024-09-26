@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
                         <a href="bracelets.php?product_type=bracelet" class="warm-gray">Bracelets</a>
                     </li> <br>
                     <li>
-                        <a href="" class="warm-gray">Earrings</a>
+                        <a href="bracelets.php?product_type=earring" class="warm-gray">Earrings</a>
                     </li><br>
                     <li>
                         <a href="" class="warm-gray">Rings</a>
