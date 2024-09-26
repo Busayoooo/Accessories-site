@@ -60,19 +60,19 @@ if (isset($_POST['submit'])) {
                         <a href="bracelets.php?product_type=bracelet" class="warm-gray">Bracelets</a>
                     </li> <br>
                     <li>
-                        <a href="bracelets.php?product_type=earring" class="warm-gray">Earrings</a>
+                        <a href="earrings.php?product_type=earring" class="warm-gray">Earrings</a>
                     </li><br>
                     <li>
-                        <a href="" class="warm-gray">Rings</a>
+                        <a href="rings.php?product_type=ring" class="warm-gray">Rings</a>
                     </li><br>
                     <li>
-                        <a href="" class="warm-gray">Necklaces</a>
+                        <a href="necklaces.php?product_type=necklaces" class="warm-gray">Necklaces</a>
                     </li><br>
                     <li>
-                        <a href="" class="warm-gray">Headbands</a>
+                        <a href="headbands.php?product_type=headbands" class="warm-gray">Headbands</a>
                     </li><br>
                     <li>
-                        <a href="" class="warm-gray">Hair Clips</a>
+                        <a href="hairclips.php?product_type=hairclips" class="warm-gray">Hair Clips</a>
                     </li><br>
                 </ul>
                 <div class="blush-pink divider"></div>
