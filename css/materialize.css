@@ -531,6 +531,10 @@
   background-color: #6200ea !important;
 }
 
+.gold{
+  background-color: #f3cb5c !important;
+}
+
 .deep-purple-text.text-accent-4 {
   color: #6200ea !important;
 }
@@ -4918,7 +4922,7 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #ff4d88;
   margin-right: 24px;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
@@ -4926,7 +4930,7 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
-  color: #ffd8a6;
+  color: #ff4d88;
 }
 
 .card .card-reveal {
@@ -5256,7 +5260,7 @@ small {
 .btn, .btn-large, .btn-small {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #ff4d88;
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: background-color .2s ease-out;
@@ -5265,7 +5269,7 @@ small {
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
-  background-color: #2bbbad;
+  background-color: #ff4d88;
 }
 
 .btn-floating {
@@ -5500,7 +5504,7 @@ button.btn-floating {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: transparent;
-  color: #343434;
+  color: #ff4d88;
   cursor: pointer;
   -webkit-transition: background-color .2s;
   transition: background-color .2s;

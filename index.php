@@ -1,5 +1,4 @@
 <?php 
-
 include("./templates/navbar.php");
 include("./templates/connect.php");
 
@@ -28,8 +27,8 @@ if (isset($_POST['submit'])) {
 ?>
 
     <style>
-        .carousel{
-            margin-top: 30px;
+        .slider{
+            margin-top: 20px;
         }
 
         main div div.l2{
@@ -43,63 +42,81 @@ if (isset($_POST['submit'])) {
         .section-text{
             margin-left: 20px;
         }
+
+        .category{
+            padding-left: 50px;
+        }
     </style>
 
     <main>
         <!-- Desktop navbar and carousel-->
         <div class="row container hide-on-med-and-down">
             <div class="col l2 category ">
-                <h5 class="charcoal">Type</h5>
-                <ul>
+                <div class="blush-pink divider"></div>
+                <h5 class="charcoal center">Category</h5> <br>
+                <div class="blush-pink divider"></div>
+                <ul class="category">
                     <li>
-                        <a href="" class="warm-gray">Bracelets</a>
-                    </li>
+                        <a href="bracelets.php?product_type=bracelet" class="warm-gray">Bracelets</a>
+                    </li> <br>
                     <li>
                         <a href="" class="warm-gray">Earrings</a>
-                    </li>
+                    </li><br>
                     <li>
                         <a href="" class="warm-gray">Rings</a>
-                    </li>
+                    </li><br>
                     <li>
                         <a href="" class="warm-gray">Necklaces</a>
-                    </li>
+                    </li><br>
                     <li>
                         <a href="" class="warm-gray">Headbands</a>
-                    </li>
+                    </li><br>
                     <li>
                         <a href="" class="warm-gray">Hair Clips</a>
-                    </li>
+                    </li><br>
                 </ul>
-                <h5 class="charcoal">Color</h5>
-                <ul>
-                    <li>
-                        <a href="" class="warm-gray">Blue</a>
-                    </li>
-                    <li>
-                        <a href="" class="warm-gray">Red</a>
-                    </li>
-                    <li>
-                        <a href="" class="warm-gray">White</a>
-                    </li>
-                    <li>
-                        <a href="" class="warm-gray">Black</a>
-                    </li>
-                    <li>
-                        <a href="" class="warm-gray">Pink</a>
-                    </li>
-                    <li>
-                        <a href="" class="warm-gray">Multicolor</a>
-                    </li>
-                </ul>
+                <div class="blush-pink divider"></div>
             </div>
             <div class="col l10 push-l1 ">
-                <div class="carousel carousel-slider">
-                    <a class="carousel-item" href="#one!"><img src="./img/Pictures_Jasper_Bracelet.jpeg"></a>
-                    <a class="carousel-item" href="#two!"><img src="./img/Clear_Quartz_Beaded_Gemstone_Bracelet.jpeg"></a>
-                    <a class="carousel-item" href="#three!"><img src="./img/Orange_Flower_Bracelet.jpeg"></a>
-                    <a class="carousel-item" href="#four!"><img src="./img/Green_and_Blue_Earthy_Bracelet_with _Lotus_Flower_Charm.jpeg"></a>
-                    <a class="carousel-item" href="#five!"><img src="./img/Green_Beaded_Earthy_Sunflower _Bracelet.jpeg"></a>
-                    <a class="carousel-item" href="#six!"><img src="./img/Poppin_Pink_Beaded_Bracelet.jpeg"></a>
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="./img/Pictures_Jasper_Bracelet.jpeg" alt="" class="responsive-img">
+                            <div class="caption center-align">
+                                <h3>Most Popular items</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/Clear_Quartz_Beaded_Gemstone_Bracelet.jpeg" alt="" class="responsive-img">
+                            <div class="caption center-align">
+                                <h3>Most Popular items</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/Orange_Flower_Bracelet.jpeg" alt="" class="responsive-img">
+                            <div class="caption center-align">
+                                <h3>Most Popular items</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/Green_and_Blue_Earthy_Bracelet_with _Lotus_Flower_Charm.jpeg" alt="" class="responsive-img">
+                            <div class="caption center-align">
+                                <h3>Most Popular items</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/Green_Beaded_Earthy_Sunflower _Bracelet.jpeg" alt="" class="responsive-img">
+                            <div class="caption center-align">
+                                <h3>Most Popular items</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/Poppin_Pink_Beaded_Bracelet.jpeg" alt="" class="responsive-img">
+                            <div class="caption center-align">
+                                <h3>Most Popular items</h3>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -117,23 +134,23 @@ if (isset($_POST['submit'])) {
         <!-- Deal of the day -->
 <br> <br>
         <div class="container">
-        <div class="row center">
-            <h1 class=" blush-pink-text bold-text">Deals of The Day</h1>
-            <div class="col l4 s6">
-                <div class="card hoverable">
-                    <div class="card-image">
-                        <img src="./img/blue-bracelet.webp" alt="" class="responsive-img">
-                    </div>
-                    <div class="card-content">
-                    <p class="warm-gray">Marble design teal bracelet without charms and with </p>
-                        <h6 class="charcoal bold-text left">N 1500</h6> <br>
-                        
-                    </div>
-                    <div class="card-action">
-                        <a class="blush-pink-text bold-text" href="">Order Now</a>
+            <h4 class="charcoal bold-text">Deals Of The Day</h4>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col l4 s6">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="./img/blue-bracelet.webp" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray">Marble design teal bracelet without charms and with </p>
+                            <h6 class="charcoal bold-text left">N 1500</h6> <br>
+                        </div>
+                        <div class="card-action">
+                        <a href="bracelets.php" class="blush-pink-text bold-text center">Order Now</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             <div class="col l4 s6">
                 <div class="card hoverable">
                     <div class="card-image">
@@ -144,8 +161,8 @@ if (isset($_POST['submit'])) {
                         <h6 class="charcoal bold-text left">N 1500</h6> <br>
                     </div>
                     <div class="card-action">
-                        <a class=" blush-pink-text bold-text" href="">Order Now</a>
-                    </div>
+                        <a href="view_product.php?product_id=<?php echo $product['product_id']; ?>" class="blush-pink-text bold-text center">Order Now</a>
+                        </div>
                 </div>
             </div>
             <div class="col l4 hide-on-med-and-down">
@@ -163,12 +180,13 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
+        <div class="divider"></div>
         </div>
 
-        <!-- Our Most Popular Items -->
+        <!-- New Arrivals -->
         <div class="container">
+            <h1 class="blush-pink-text bold-text center">New Arrivals</h1>
         <div class="row center">
-            <h1 class="blush-pink-text bold-text">Our Most Popular Items</h1>
             <div class="col l4 hide-on-med-and-down">
                 <div class="card hoverable">
                     <div class="card-image">
@@ -284,8 +302,15 @@ if (isset($_POST['submit'])) {
     <script src="js/materialize.js"></script>
     <script>
         $(document).ready(function(){
-        $('.carousel').carousel();
-        $('.slider').slider();
+        $('.carousel').carousel(
+        );
+        $('.slider').slider({
+                indicators:false,
+                height:400
+                // interval: 15000, //The duration of the picture
+                // duration: 1000 //The time interval between each picture(15secs)
+            });
+
         });
     </script>
 
