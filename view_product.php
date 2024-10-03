@@ -44,7 +44,7 @@ if (isset($_GET['product_id'])) {
                     <p class="warm-gray"><?php echo $product['product_name'];?></p>
                     <br>
                     <div class="card-action center">
-                        <a href="" class=""><i class="material-icons">cart</i> Add to cart</a>
+                        <a href="" class=""><i class="material-icons">shopping_cart</i> Add to cart</a>
                     </div>
                 </div>
             </div>

@@ -65,6 +65,7 @@ if (isset($_POST['sign-up'])) {
                         <input type="submit" name="sign-up" value="Sign-Up" id="sign-up" class="btn btn-flat btn-large blush-pink white-text">
                     </div>
                 </form>
+                <p class="center">Already have an account?<a href="./login.php"> Login</a></p>
             </div>
         </div>
     </div>

@@ -1,4 +1,6 @@
 <?php 
+
+
 include("./templates/navbar.php");
 include("./templates/connect.php");
 
@@ -24,6 +26,32 @@ if (isset($_POST['submit'])) {
         echo 'error: ' . mysqli_error($db_connect);
     }
 }
+
+$user_id= "";
+$error_msg = "";
+
+if (isset($_GET['user_id'])) {
+    // assign receipe id to the local variable
+    $user_id = $_GET['user_id'];
+
+    // fetch data from the table using row id
+    $fetch_query = "SELECT * FROM `login_tb` WHERE `user_id` = $user_id";
+
+    // send query to server
+    $send_fetch_query = mysqli_query($db_connect, $fetch_query);
+
+    // store received data in an associative array
+    $users = mysqli_fetch_assoc($send_fetch_query);
+
+    // print_r($users);
+
+    if (!$users) {
+        $error_msg = "user not found";
+    }
+
+} else {
+    $error_msg = "No user logged in !";
+}
 ?>
 
     <style>
@@ -48,7 +76,7 @@ if (isset($_POST['submit'])) {
         }
     </style>
 
-    <main>
+    <main class="playwrite-de-grund-font">
         <!-- Desktop navbar and carousel-->
         <div class="row container hide-on-med-and-down">
             <div class="col l2 category ">
@@ -304,6 +332,7 @@ if (isset($_POST['submit'])) {
         $(document).ready(function(){
         $('.carousel').carousel(
         );
+        $('.dropdown-trigger').dropdown();
         $('.slider').slider({
                 indicators:false,
                 height:400

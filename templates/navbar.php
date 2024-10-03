@@ -1,3 +1,36 @@
+<?php 
+include("./templates/connect.php");
+
+session_start();
+
+$user_id= "";
+$error_msg = "";
+
+if (isset($_GET['user_id'])) {
+    // assign receipe id to the local variable
+    $user_id = $_GET['user_id'];
+
+    // fetch data from the table using row id
+    $fetch_query = "SELECT * FROM `login_tb` WHERE `user_id` = $user_id";
+
+    // send query to server
+    $send_fetch_query = mysqli_query($db_connect, $fetch_query);
+
+    // store received data in an associative array
+    $users = mysqli_fetch_assoc($send_fetch_query);
+
+    // print_r($users);
+
+    if (!$users) {
+        $error_msg = "user not found";
+    }
+
+} else {
+    $error_msg = "No user logged in !";
+}
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -88,7 +121,17 @@
 
                         <ul class="right">
                             <li class="">
-                                <a href="" class="creamy-white-text">Account<i class=" left material-icons">account_circle</i></a>
+                                <a href="#" data-target="dropdown1" class="creamy-white-text dropdown-trigger">Account<i class=" left material-icons">account_circle</i></a>
+                                <ul class="dropdown-content" id="dropdown1">
+                                    <li> <a class=" charcoal center bold-text" href="#!">Account Settings</a> </li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li> <a class="charcoal" href="#!">My Orders</a> </li>
+                                    <li> <a class="charcoal" href="edit_account.php?user_id=<?php echo $users['user_id']; ?>"> Edit Account</a> </li> 
+                                    <li> <a class=" charcoal red-text" href="logout.php"><i class="material-icons">input</i>Logout</a> </li>
+                                    <li class="divider" tabindex="-1"></li>
+                                    <li> <a class=" center charcoal red white-text" href="#!"><i class="material-icons">delete_forever</i>Delete Account</a> </li>
+                                </ul>
                             </li>
                             <li class="nav-icon">
                                 <a href="" class="creamy-white-text">Cart<i class="left material-icons">shopping_cart</i></a>
