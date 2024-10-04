@@ -1,5 +1,7 @@
 <?php
+session_start();
 include("./templates/connect.php");
+
 
 $username = "";
 $password = "";
@@ -19,7 +21,7 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($send_query)>0) {
         $login_details = mysqli_fetch_assoc($send_query);
         // check if password matches
-        if ($login_details['password']=== $password) {
+        if ($login_details['password'] === $password) {
             $_SESSION['username'] = $_POST['username'];
             header('Location: index.php');
             exit();

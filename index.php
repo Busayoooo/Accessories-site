@@ -9,6 +9,18 @@ $phone_number = "";
 $email = "";
 $description = "";
 
+// select all from products table
+$select_query = "SELECT * FROM `products`";
+
+$send_query = mysqli_query($db_connect, $select_query);
+
+$products = mysqli_fetch_all($send_query, MYSQLI_ASSOC);
+
+
+// echo $users['user_id'];
+// print_r($fetch_query);
+
+
 if (isset($_POST['submit'])) {
     $name =  $_POST['name'];
     $phone_number = $_POST['phone_number'];
@@ -19,7 +31,11 @@ if (isset($_POST['submit'])) {
     $insert_query = "INSERT INTO `custom_pieces`(`name`, `phone_number`, `email`, `description`) VALUES ( '$name', '$phone_number', '$email', '$description')";
 
     // send query to server
-    $send_query = mysqli_query($db_connect, $insert_query);   
+    $send_query = mysqli_query($db_connect, $insert_query);  
+    
+    if ($send_query) {
+        echo 'Custom piece request sent';
+    }
 
     if ($send_query) {
     } else {
@@ -30,28 +46,6 @@ if (isset($_POST['submit'])) {
 $user_id= "";
 $error_msg = "";
 
-if (isset($_GET['user_id'])) {
-    // assign receipe id to the local variable
-    $user_id = $_GET['user_id'];
-
-    // fetch data from the table using row id
-    $fetch_query = "SELECT * FROM `login_tb` WHERE `user_id` = $user_id";
-
-    // send query to server
-    $send_fetch_query = mysqli_query($db_connect, $fetch_query);
-
-    // store received data in an associative array
-    $users = mysqli_fetch_assoc($send_fetch_query);
-
-    // print_r($users);
-
-    if (!$users) {
-        $error_msg = "user not found";
-    }
-
-} else {
-    $error_msg = "No user logged in !";
-}
 ?>
 
     <style>
@@ -77,6 +71,8 @@ if (isset($_GET['user_id'])) {
     </style>
 
     <main class="playwrite-de-grund-font">
+
+
         <!-- Desktop navbar and carousel-->
         <div class="row container hide-on-med-and-down">
             <div class="col l2 category ">
@@ -166,7 +162,7 @@ if (isset($_GET['user_id'])) {
             <div class="divider"></div>
             <div class="row">
                 <div class="col l4 s6">
-                    <div class="card hoverable">
+                    <div class="card hoverable large">
                         <div class="card-image">
                             <img src="./img/blue-bracelet.webp" alt="" class="responsive-img">
                         </div>
@@ -179,8 +175,9 @@ if (isset($_GET['user_id'])) {
                         </div>
                     </div>
                 </div>
+            <?php foreach($products as $product){ ?>
             <div class="col l4 s6">
-                <div class="card hoverable">
+                <div class="card hoverable large">
                     <div class="card-image">
                         <img src="./img/pink-bracelet-2.jpg" alt="" class="responsive-img">
                     </div>
@@ -193,8 +190,9 @@ if (isset($_GET['user_id'])) {
                         </div>
                 </div>
             </div>
+            <?php } ?>
             <div class="col l4 hide-on-med-and-down">
-                <div class="card hoverable">
+                <div class="card hoverable large">
                     <div class="card-image">
                         <img src="./img/multicolor-bracelet-2.jpg" alt="" class="responsive-img">
                     </div>
@@ -216,7 +214,7 @@ if (isset($_GET['user_id'])) {
             <h1 class="blush-pink-text bold-text center">New Arrivals</h1>
         <div class="row center">
             <div class="col l4 hide-on-med-and-down">
-                <div class="card hoverable">
+                <div class="card hoverable large">
                     <div class="card-image">
                         <img src="./img/blue-bracelet-3.webp" alt="" class="responsive-img">
                     </div>
@@ -231,9 +229,9 @@ if (isset($_GET['user_id'])) {
                 </div>
             </div>
             <div class="col l4 s6">
-                <div class="card hoverable">
+                <div class="card hoverable large">
                     <div class="card-image">
-                        <img src="./img/pink-bracelet-3.jpg" alt="" class="responsive-img">
+                        <img src="./img/pink-bracelet-3.jpeg" alt="" class="responsive-img">
                     </div>
                     <div class="card-content">
                     <p class=" warm-gray">Marble design teal bracelet without charms and with </p>
@@ -245,9 +243,9 @@ if (isset($_GET['user_id'])) {
                 </div>
             </div>
             <div class="col l4 s6">
-                <div class="card hoverable">
+                <div class="card hoverable large">
                     <div class="card-image">
-                        <img src="./img/multicolor-bracelet.avif" alt="" class="responsive-img">
+                        <img src="./img/pink-bracelet-2.jpg" alt="" class="responsive-img">
                     </div>
                     <div class="card-content">
                     <p class="warm-gray">Marble design teal bracelet without charms and with </p>
@@ -260,6 +258,8 @@ if (isset($_GET['user_id'])) {
             </div>
         </div>
         </div>
+
+        <div class="container divider"></div>
 
         <!-- custom section -->
         <div class="container">
@@ -286,7 +286,7 @@ if (isset($_GET['user_id'])) {
                         </div>
                         <div class="col s12 input-field">
                             <input type="text" name="description" id="description">
-                            <label for="description">The custom piece description</label>
+                            <label for="description">The custom piece description:</label>
                         </div>
                         <br>
                         <div class="center input-field">
@@ -296,6 +296,8 @@ if (isset($_GET['user_id'])) {
                 </div>
             </div>
         </div>
+
+        <div class="container divider"></div>
 
         <!-- Customer reviews -->
         <div id="customers_session" class="container scrollspy">
@@ -324,6 +326,9 @@ if (isset($_GET['user_id'])) {
                 </div>
             </div>
         </div>
+        <div class="container divider"></div>
+        <br><br>
+
     </main>
     
     <script src="js/jquery.js"></script>
@@ -332,7 +337,6 @@ if (isset($_GET['user_id'])) {
         $(document).ready(function(){
         $('.carousel').carousel(
         );
-        $('.dropdown-trigger').dropdown();
         $('.slider').slider({
                 indicators:false,
                 height:400

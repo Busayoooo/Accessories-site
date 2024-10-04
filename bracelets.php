@@ -2,15 +2,10 @@
 include("./templates/navbar.php");
 include("./templates/connect.php");
 
-$product_type = "";
 
-if (isset($_GET['product_type'])) {
-    // assign receipe id to the local variable
-$product_type= $_GET['product_type'];
-//write the fetch query
 
 // echo $product_type;
-$fetch_query = "SELECT * FROM `products`  WHERE `product_type` = '$product_type'";
+$fetch_query = "SELECT * FROM `products`  WHERE `product_type` = 'bracelet'";
 
 //send the query to the server
 $send_fetch_query = mysqli_query($db_connect, $fetch_query);
@@ -18,13 +13,8 @@ $send_fetch_query = mysqli_query($db_connect, $fetch_query);
 //receive data from server
 $products = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
-// print_r($products);
 
-} else {
-    $error_msg = "No bracelet selected!";
-
-    // output content to the html no loops.
-}
+print_r($products);
 
 ?>
 
