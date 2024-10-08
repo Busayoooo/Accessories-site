@@ -23,7 +23,7 @@ if (isset($_POST['sign-up'])) {
     $send_query = mysqli_query($db_connect, $insert_query);    
 
     if ($send_query) {
-        header('Location: index.php');
+        header('Location: login.php');
         exit();
     } else {
         echo 'Error: ' . mysqli_error($db_connect);

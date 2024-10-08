@@ -267,28 +267,28 @@ $error_msg = "";
                 <div class="col s12 l6">
                     <h3 class=" blush-pink-text">Want to have a custom piece made?</h3>
                     <p class=" warm-gray flow-text">Click the button below to reach out to us 👇</p>
-                    <a href="" class= "hide-on-med-and-down blush-pink creamy-white-text btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
+                    <a href="mailto:abassalex49@gmail.com" class= "hide-on-med-and-down blush-pink creamy-white-text btn btn-large left hoverable">Email us at<i class="right material-icons">email</i></a>
                     <a class= "hide-on-large-only right blush-pink creamy-white-text btn btn-large left hoverable">Call us Now<i class="right material-icons">phone</i></a>
                 </div>
                 <div class="col s12 l6">
-                    <form action="index.php" method="post">
-                        <div class="col s12 l6 input-field">
+                    <form action="./index.php" method="post">
+                        <div class="input-field">
                             <input type="text" name="name" id="name">
                             <label for="name">Your Name</label>
                         </div>
-                        <div class="col s12 l6 input-field">
+                        <div class="input-field">
                             <input type="tel" name="phone_number" id="phone_number">
                             <label for="phone_number">Your Phone Number</label>
                         </div>
-                        <div class="col s12 input-field">
+                        <div class="input-field">
                             <input type="email" name="email" id="email">
                             <label for="email">Enter Your Email</label>
                         </div>
-                        <div class="col s12 input-field">
+                        <div class="input-field">
                             <input type="text" name="description" id="description">
                             <label for="description">The custom piece description:</label>
                         </div>
-                        <br>
+                        
                         <div class="center input-field">
                             <input class="btn btn-large blush-pink creamy-white-text center" type="submit" name="submit" id="submit" value="Send" >
                         </div>
@@ -328,7 +328,6 @@ $error_msg = "";
         </div>
         <div class="container divider"></div>
         <br><br>
-
     </main>
     
     <script src="js/jquery.js"></script>
@@ -343,13 +342,9 @@ $error_msg = "";
                 // interval: 15000, //The duration of the picture
                 // duration: 1000 //The time interval between each picture(15secs)
             });
-
         });
     </script>
 
-<?php 
-    include("./templates/footer.php");
-?>
-
+<?php include("./templates/footer.php"); ?>
 </body>
 </html>

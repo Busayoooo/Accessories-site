@@ -28,7 +28,6 @@ $reviews = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
 <main>
     <div class="container">
-        <a href="index.php" class="left blush-pink-text"><i class="blush-pink-text material-icons">home</i>Back home</a>
         <h1 class="center-align blush-pink-text">Reviews</h1>
         <div class="row">
             <?php foreach ($reviews as $review) { ?>
@@ -37,7 +36,7 @@ $reviews = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     <li class="collection-item avatar">
                     <i class="material-icons circle blush-pink">person</i>
                     <h6 class="charcoal bold-text"><?php echo $review['first_name'] . $review['last_name'] ;?></h6>
-                    <i><p class="warm-gray">"<?php echo $review['review'];?>"</p></i>
+                    <i><p class="warm-gray left">"<?php echo $review['review'];?>"</p></i>
                     <p class="charcoal right">Created by: <?php echo $review['email'];?></p>
                     </li>
                 </ul>

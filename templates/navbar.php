@@ -19,10 +19,6 @@ if (isset($_SESSION["username"])) {
 }else {
     $account = 'Account';
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -30,16 +26,16 @@ if (isset($_SESSION["username"])) {
 
     <!-- header -->
     <header>
-        <div class="navbar-fixed">
+        <div class="navbar-fixed">  
             <nav class="z-depth-0 nav-wrapper blush-pink">
                 <div class="container">
                     <div class="row">
-                        <a href="index.php" class="brand-logo hide-on-large-only mobile_logo"><img width="55px" src="./img/logo.png" alt="" class="responsive-img"></a>
+                        <a href="index.php" class="left" ><img src="./img/logo.png" alt="" class=" left col s1 hide-on-large-only brand-logo responsive-img" width="150px" ></a>
                         <!-- sidenav -->
-                        <a href="index.php" class="gold-text brand-logo hide-on-med-and-down">Chic Charms</a>
-                        <a href="#sidenav" class="sidenav-trigger creamy-white-text"><i class="material-icons">menu</i></a>
+                        <a href="index.php" class="col  gold-text brand-logo hide-on-med-and-down">Chic Charms</a>
+                        <a href="#sidenav" class="col push-s1 sidenav-trigger creamy-white-text"><i class="material-icons">menu</i></a>
 
-                        <ul class="right">
+                        <ul class="right hide-on-med-and-down">
                             <li><a href="index.php" class="creamy-white-text"><i class="material-icons left">home</i>Home</a></li>
                             <!-- desktop dropdown -->
                             <?php if (isset($_SESSION["username"])) { ?>
@@ -50,63 +46,43 @@ if (isset($_SESSION["username"])) {
                             <li><a href="#" class="creamy-white-text"><i class="material-icons left">shopping_cart</i>Cart</a></li>
                         </ul>
                         <!-- dropdown content -->
-                        <ul class="dropdown-content" id="dropdown1">
+                        <ul class="dropdown-content hide-on-med-and-down" id="dropdown1">
                             <?php if(isset($_SESSION["username"])) {?>
                                 <li> <a class="charcoal center bold-text" href="#!">Account Settings</a> </li>
                                 <li> <a class="charcoal" href="#!">My Orders</a></li>
                                 <li> <a class="charcoal" href="edit_account.php?user_id=<?php echo $users['user_id'];?>"> Edit Account</a> </li> 
                                 <li> <a class=" charcoal red-text" href="logout.php"><i class="material-icons">input</i>Logout</a> </li>
                                 <li class="divider" tabindex="-1"></li>
-                                <li> <a class=" center charcoal red white-text" href="#!"><i class="material-icons">delete_forever</i>Delete Account</a> </li>
+                                <li> <a class=" center charcoal red white-text" href="delete_account.php"><i class="material-icons">delete_forever</i>Delete Account</a> </li>
                             <?php } ?>
                         </ul>
+                    </div>
+                    <div>
+                        
                     </div>
                 </div>
             </nav>
         </div>
-        <ul id="sidenav" class="sidenav">
-        <h5 class="charcoal">Type</h5>
-            <ul>
-                <li>
-                    <a href="" class="warm-gray">Bracelets</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray ">Earrings</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Rings</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Necklaces</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Headbands</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Hair Clips</a>
-                </li>
-            </ul>
-        <h5 class="charcoal">Color</h5>
-            <ul>
-                <li>
-                    <a href="" class="warm-gray">Blue</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Red</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">White</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Black</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Pink</a>
-                </li>
-                <li>
-                    <a href="" class="warm-gray">Multicolor</a>
-                </li>
-            </ul>
+        <ul id="sidenav" class="sidenav blush-pink">
+            <h5 class="center gold-text ">Categories</h5>
+            <li>
+                <a href="" class="creamy-white-text">Bracelets</a>
+            </li>
+            <li>
+                <a href="" class="creamy-white-text">Earrings</a>
+            </li>
+            <li>
+                <a href="" class="creamy-white-text">Rings</a>
+            </li>
+            <li>
+                <a href="" class="creamy-white-text">Necklaces</a>
+            </li>
+            <li>
+                <a href="" class="creamy-white-text">Headbands</a>
+            </li>
+            <li>
+                <a href="" class="creamy-white-text">Hair Clips</a>
+            </li>
         </ul>
     </header>
 </body>

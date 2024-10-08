@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Chic Charms</title>
+
     <style>
     * playwrite-de-grund-font {
     font-family: "Playwrite DE Grund", cursive;
@@ -62,7 +63,7 @@
 
     @media only screen and (min-width: 601px) {
         nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
-            height: 85;
+            height: 65;
         }
     }
 
