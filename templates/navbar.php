@@ -21,6 +21,21 @@ if (isset($_SESSION["username"])) {
 }
 ?>
 
+<style>
+    .qwitcher-grypen-regular {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.qwitcher-grypen-bold {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+</style>
+
 <!DOCTYPE html>
 <body>
 
@@ -32,7 +47,7 @@ if (isset($_SESSION["username"])) {
                     <div class="row">
                         <a href="index.php" class="left" ><img src="./img/logo.png" alt="" class=" left col s1 hide-on-large-only brand-logo responsive-img" width="150px" ></a>
                         <!-- sidenav -->
-                        <a href="index.php" class="col  gold-text brand-logo hide-on-med-and-down">Chic Charms</a>
+                        <a href="index.php" class="qwitcher-grypen-regular gold-text brand-logo hide-on-med-and-down">Chic Charms</a>
                         <a href="#sidenav" class="col push-s1 sidenav-trigger creamy-white-text"><i class="material-icons">menu</i></a>
 
                         <ul class="right hide-on-med-and-down">
@@ -43,7 +58,7 @@ if (isset($_SESSION["username"])) {
                             <?php }else{ ?>
                             <li> <a class="btn gold darken-4" href="login.php"><i class="material-icons left">input</i>Login</a></li>
                             <?php }  ?>
-                            <li><a href="#" class="creamy-white-text"><i class="material-icons left">shopping_cart</i>Cart</a></li>
+                            <li><a href="cart.php" class="creamy-white-text"><i class="material-icons left">shopping_cart</i>Cart</a></li>
                         </ul>
                         <!-- dropdown content -->
                         <ul class="dropdown-content hide-on-med-and-down" id="dropdown1">
