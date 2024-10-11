@@ -6,11 +6,11 @@ include('./templates/connect.php');
 $product_id = "";
 $error_msg = "";
 
-// check if a particular recipe id is selected
 
+// check if a particular recipe id is selected
 if (isset($_GET['product_id'])) {
-    // assign receipe id to the local variable
     $product_id = $_GET['product_id'];
+    // assign receipe id to the local variable
 
     // fetch data from the table using row id
     $fetch_query = "SELECT * FROM `products` WHERE `product_id` = $product_id";
@@ -22,33 +22,39 @@ if (isset($_GET['product_id'])) {
     $order = mysqli_fetch_assoc($send_fetch_query);
 
     // print_r($recipe);
-    }
+}
 
-    if (isset($_POST['add_to_cart'])) {
-        if (isset($_GET['product_id'])) {
-            $product_id = $_GET['product_id'];
-            $fetch_query = "SELECT * FROM `products` WHERE `product_id` = $product_id";
-            $send_fetch_query = mysqli_query($db_connect, $fetch_query);
-            $order = mysqli_fetch_assoc($send_fetch_query);
+if (isset($_POST['add_to_cart'])) {
 
-            $item_description = $order['product_name'];
-            $price = $order['price'];
-            $item_image = $order['img_name'] ;
-            $quantity = $_POST['quantity'];
+    if (isset($_GET['product_id'])) {
 
-            $insert_query = "INSERT INTO `cart`(`item_description`, `price`, `item_image`, `quantity`) VALUES ('$item_description','$price','$item_image','$quantity')";
-            $insert_result = mysqli_query($db_connect, $insert_query);
+        $product_id = $_GET['product_id'];
 
-            if ($insert_result) {
-                header('Location: cart.php');
-                exit();
-            } else {
-                echo "Error adding to cart:" . mysqli_error($db_connect);
-            }
+        $fetch_query = "SELECT * FROM `products` WHERE `product_id` = $product_id ";
+        $send_fetch_query = mysqli_query($db_connect, $fetch_query);
+        $order = mysqli_fetch_assoc($send_fetch_query);
+
+        $item_description = $order['product_name'];
+        $price = $order['price'];
+        $item_image = $order['img_name'] ;
+
+        $insert_query = "INSERT INTO `cart` (`item_description`, `price`, `item_image`) VALUES ('$item_description','$price','$item_image')";
+        $insert_result = mysqli_query($db_connect, $insert_query);
+
+        if ($insert_result) {
+            header('Location: cart.php');
+            exit();
+        } else {
+            echo "Error adding to cart:" . mysqli_error($db_connect);
         }
-    }
-    
 
+    }
+}
+
+
+
+// echo $_GET['product_id'];
+   
 ?>
 
 <!DOCTYPE html>
@@ -153,22 +159,22 @@ if (isset($_GET['product_id'])) {
     <div class="section">
         <div class="row product_card ">
             <div class="card hoverable ">
-                <div class="col s6">
-                    <div class="card-image">
-                        <img src="./img/<?php echo $order['img_name']; ?>.jpeg" alt="product image" class="responsive-img">
+                <form action="view_product.php?product_id=<?php echo $product_id; ?>" method="post">
+                    <div class="col s6">
+                        <div class="card-image">
+                            <img src="./img/<?php echo $order['img_name']; ?>.jpeg" alt="product image" class="responsive-img">
+                        </div>
                     </div>
-                </div>
-                <div class="col s6 card-content">
-                    <h1 class="charcoal">N<?php echo $order['price'];?> </h1>
-                    <p class="warm-gray"><?php echo $order['product_name'];?></p>
-                    <br>
-                    <div class="card-action center">
-                        <form action="view_product.php" method="post">
-                        <input type="submit" value="Add To Cart" name="add_to_cart" id="add_to_cart" class="btn btn-large btn-flat blush-pink-text">
-                        </form>
-                        <!-- <a href="cart.php?product_id=<?php echo $order['product_id']; ?>" class="">Add to cart</a> -->
+                    <div class="col s6 card-content">
+                        <h1 class="charcoal"><?php echo '₦' . number_format($order['price'], 2); ?></h1>
+                        <p class="warm-gray"><?php echo $order['product_name'];?></p>
+                        <br>
+                        <div class="card-action center">
+                            <input type="submit" value="Add To Cart" name="add_to_cart" id="add_to_cart" class="btn btn-large btn-flat blush-pink-text">
+                            <!-- <a href="cart.php?product_id=<?php echo $order['product_id']; ?>" class="">Add to cart</a> -->
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -7,28 +7,13 @@ include("./templates/connect.php");
 $product_id = "";
 $error_msg = "";
 
-// check if a particular recipe id is selected
+$select_query = "SELECT * FROM `cart`";
 
-if (isset($_GET['product_id'])) {
-    // assign receipe id to the local variable
-    $product_id = $_GET['product_id'];
+$send_query = mysqli_query($db_connect, $select_query);
 
-    // fetch data from the table using row id
-    $fetch_query = "SELECT * FROM `products` WHERE `product_id` = $product_id";
+$carts = mysqli_fetch_all($send_query, MYSQLI_ASSOC);
 
-    // send query to server
-    $send_fetch_query = mysqli_query($db_connect, $fetch_query);
-
-    // store received data in an associative array
-    $product = mysqli_fetch_assoc($send_fetch_query);
-
-    // print_r($recipe);
-
-} else {
-    $error_msg = "No bracelet selected!";
-
-    // output content to the html no loops.
-}
+echo isset($_POST['quantity']);
 ?>
 
 <style>
@@ -55,29 +40,61 @@ if (isset($_GET['product_id'])) {
         border: solid #f7cd45;
         border-width: 1px;
     }
+
+    .cart-text{
+        padding: 20px;
+    }
+    .cart-text span{
+        margin-right: 200px;
+    }
+    .row{
+        height: 500px !important;
+        overflow: scroll;
+    }
+    .quantity{
+        width: 50px !important;
+        margin-left: 20px !important;
+        text-align: center;
+    }
 </style>
 
 <main>
     <br> <br>
     <div class="container cart-color z-depth-4">
-        <div class="row">
-            <div class="col l8"></div>
-            <div class="col l3">
-                <br>
-                <div class="summary center">
-                    <h3 class=" center blush-pink-text">Summary</h3>
-                    <div class="divider gold"></div>
-                    <br>
-                    <h5 class="warm-gray">Total:</h5>
-                    <br>
-                    <form action="./cart.php" method="post">
-                        <a href="./confirmation.php" class=" outline center btn btn-flat btn-large creamy-white-text blush-pink">Place Order</a>
-                    </form>
+        <form action="cart.php" method="post">
+            <?php if($carts){ ?>
+            <div class="row">
+                <div class="col l8">
+                        <?php 
+                        $total_price = 0;
+                        foreach ($carts as $cart) {
+                        $total_price += $cart['price'];
+                        ?>
+                        
+                        <div class="cart-text">
+                            <h5><?php echo $cart['item_description']; ?></h5>
+                            <span><?php echo '₦' . number_format($cart['price'], 2); ?></span>
+                            <button class="btn" type="submit"><i class="material-icons">delete</i></button>
+                            <input type="number" name="quantity" id="quantity" value="1" class="quantity">
+                        </div>
+                        <?php } ?>
                 </div>
-                <br>
-                <div class="blush-pink gold-text bold-text col l12 outline "><p class="center pay-on-delivery">Pay On <br> Delivery</p></div>
+                <div class="col l3">
+                    <br>
+                    <div class="summary center">
+                        <h3 class=" center blush-pink-text">Summary</h3>
+                        <div class="divider gold"></div>
+                        <br>
+                        <h5 class="warm-gray">Total: <?php echo $total_price; ?></h5>
+                        <br>
+                            <a href="./confirmation.php" class=" outline center btn btn-flat btn-large creamy-white-text blush-pink">Place Order</a>
+                    </div>
+                    <br>
+                    <div class="blush-pink gold-text bold-text col l12 outline "><p class="center pay-on-delivery">Pay On <br> Delivery</p></div>
+                </div>
             </div>
-        </div>
+            <?php }else { echo 'cart is empty'; } ?>
+        </form>
     </div>
     <br> <br>
 </main>
