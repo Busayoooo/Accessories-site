@@ -56,7 +56,6 @@ echo isset($_POST['quantity']);
         margin-left: 20px !important;
         text-align: center;
     }
-
 </style>
 
 <main>

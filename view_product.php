@@ -54,8 +54,7 @@ if (isset($_POST['add_to_cart'])) {
 
 
 // echo $_GET['product_id'];
-    
-
+   
 ?>
 
 <!DOCTYPE html>
@@ -174,8 +173,8 @@ if (isset($_POST['add_to_cart'])) {
                             <input type="submit" value="Add To Cart" name="add_to_cart" id="add_to_cart" class="btn btn-large btn-flat blush-pink-text">
                             <!-- <a href="cart.php?product_id=<?php echo $order['product_id']; ?>" class="">Add to cart</a> -->
                         </div>
+                    </div>
                 </form>
-                </div>
             </div>
         </div>
     </div>
