@@ -45,6 +45,7 @@ $products = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
                     </div>
                     <div class="card-content">
                         <div class=" center warm-gray"><?php echo $product['product_name'];?></div>
+                        <br>
                         <strong class="charcoal">N<?php echo $product['price']?></strong> <br><br>
                     </div>
                     <div class="card-action">

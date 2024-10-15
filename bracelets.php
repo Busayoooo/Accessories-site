@@ -13,9 +13,7 @@ $send_fetch_query = mysqli_query($db_connect, $fetch_query);
 //receive data from server
 $products = mysqli_fetch_all($send_fetch_query, MYSQLI_ASSOC);
 
-
-print_r($products);
-
+// print_r($products);
 ?>
 
 <style>

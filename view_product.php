@@ -162,7 +162,7 @@ if (isset($_POST['add_to_cart'])) {
                 <form action="view_product.php?product_id=<?php echo $product_id; ?>" method="post">
                     <div class="col s6">
                         <div class="card-image">
-                            <img src="./img/<?php echo $order['img_name']; ?>.jpeg" alt="product image" class="responsive-img">
+                            <img src="./img/<?php echo $order['img_name']; ?>.jpeg" alt="product image" >
                         </div>
                     </div>
                     <div class="col s6 card-content">

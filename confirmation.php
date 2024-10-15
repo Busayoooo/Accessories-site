@@ -2,6 +2,8 @@
 
 include("./templates/navbar.php");
 include("./templates/connect.php");
+
+
 ?>
 
 <!DOCTYPE html>

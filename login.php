@@ -23,8 +23,10 @@ if (isset($_POST['login'])) {
         // check if password matches
         if ($login_details['password'] === $password) {
             $_SESSION['username'] = $_POST['username'];
-            header('Location: index.php');
-            exit();
+            $_SESSION['user_id'] = $_login_details['user_id'];
+            echo $_login_details['user_id'];
+            // header('Location: index.php');
+            // exit();
         }else {
             echo 'wrong password';
         }

@@ -164,99 +164,138 @@ $error_msg = "";
                 <div class="col l4 s6">
                     <div class="card hoverable large">
                         <div class="card-image">
-                            <img src="./img/blue-bracelet.webp" alt="" class="responsive-img">
+                            <img src="./img/8ball_bracelet.jpeg" alt="" class="responsive-img">
                         </div>
                         <div class="card-content">
-                        <p class="warm-gray">Marble design teal bracelet without charms and with </p>
-                            <h6 class="charcoal bold-text left">N 1500</h6> <br>
+                        <p class="warm-gray">8ball themed beaded bracelet with star charms.</p>
+                            <h6 class="charcoal bold-text left">₦ 3500</h6> <br>
                         </div>
                         <div class="card-action">
-                        <a href="bracelets.php" class="blush-pink-text bold-text center">Order Now</a>
+                        <a href="view_product.php?product_id=1" class="blush-pink-text bold-text center">Order Now</a>
                         </div>
                     </div>
                 </div>
-            <?php foreach($products as $product){ ?>
-            <div class="col l4 s6">
-                <div class="card hoverable large">
-                    <div class="card-image">
-                        <img src="./img/pink-bracelet-2.jpg" alt="" class="responsive-img">
-                    </div>
-                    <div class="card-content">
-                    <p class="warm-gray">Marble design teal bracelet without charms and with </p>
-                        <h6 class="charcoal bold-text left">N 1500</h6> <br>
-                    </div>
-                    <div class="card-action">
-                        <a href="view_product.php?product_id=<?php echo $product['product_id']; ?>" class="blush-pink-text bold-text center">Order Now</a>
+                <div class="col l4 hide-on-med-and-down">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/strawberry_earrings.jpeg" alt="" class="responsive-img">
                         </div>
-                </div>
-            </div>
-            <?php } ?>
-            <div class="col l4 hide-on-med-and-down">
-                <div class="card hoverable large">
-                    <div class="card-image">
-                        <img src="./img/multicolor-bracelet-2.jpg" alt="" class="responsive-img">
-                    </div>
-                    <div class="card-content">
-                    <p class="warm-gray">Marble design teal bracelet without charms and with </p>
-                        <h6 class="charcoal bold-text left">N 1500</h6> <br>
-                    </div>
-                    <div class="card-action">
-                        <a class=" blush-pink-text bold-text" href="">Order Now</a>
+                        <div class="card-content">
+                        <p class="warm-gray">gold Strawberry shaped shaped earrings</p>
+                            <h6 class="charcoal bold-text left">₦ 2000</h6> <br>
+                        </div>
+                        <div class="card-action">
+                            <a class=" blush-pink-text bold-text" href="view_product.php?product_id=17">Order Now</a>
+                        </div>
                     </div>
                 </div>
+                <div class="col l4 hide-on-med-and-down">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/silver_butterfly_necklace.jpeg" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray">Silver necklace with silver butterfly charms</p>
+                            <h6 class="charcoal bold-text left">₦ 5000</h6> <br>
+                        </div>
+                        <div class="card-action">
+                            <a class=" blush-pink-text bold-text" href="view_product.php?product_id=34">Order Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="divider"></div>
+            <div class="divider"></div>
         </div>
 
         <!-- New Arrivals -->
         <div class="container">
             <h1 class="blush-pink-text bold-text center">New Arrivals</h1>
-        <div class="row center">
-            <div class="col l4 hide-on-med-and-down">
-                <div class="card hoverable large">
-                    <div class="card-image">
-                        <img src="./img/blue-bracelet-3.webp" alt="" class="responsive-img">
+            <div class="row">
+                <div class="col l4 s6">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/8ball_bracelet.jpeg" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray center">8ball themed beaded bracelet with star charms.</p>
+                            <h6 class="charcoal bold-text left">₦ 3500</h6> <br>
+                        </div>
+                        <div class="card-action">
+                        <a href="view_product.php?product_id=1" class="blush-pink-text bold-text center">Order Now</a>
+                        </div>
                     </div>
-                    <div class="card-content">
-                    <p class=" warm-gray">Marble design teal bracelet without charms and with </p>
-                        <h6 class="Charcoal bold-text left">N 1500</h6> <br>
-                        
+                </div>
+                <div class="col l4 hide-on-med-and-down">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/strawberry_earrings.jpeg" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray center">gold Strawberry shaped shaped earrings</p>
+                            <h6 class="charcoal bold-text left">₦ 2000</h6> <br>
+                        </div>
+                        <div class="card-action">
+                            <a class=" blush-pink-text bold-text" href="view_product.php?product_id=17">Order Now</a>
+                        </div>
                     </div>
-                    <div class="card-action">
-                        <a class=" blush-pink-text bold-text" href="">Order Now</a>
+                </div>
+                <div class="col l4 hide-on-med-and-down">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/Rainbow_diamond_studded_saphire_ring.jpeg" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray center">Rainbow Gem ring</p>
+                            <h6 class="charcoal bold-text left">₦ 2000</h6> <br>
+                        </div>
+                        <div class="card-action">
+                            <a class=" blush-pink-text bold-text" href="view_product.php?product_id=22">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l4 hide-on-med-and-down">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/silver_butterfly_necklace.jpeg" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray">Silver necklace with silver butterfly charms</p>
+                            <h6 class="charcoal bold-text left">₦ 5000</h6> <br>
+                        </div>
+                        <div class="card-action">
+                            <a class=" blush-pink-text bold-text" href="view_product.php?product_id=34">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l4 hide-on-med-and-down">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/Crochet_Tulip_Headband.jpeg" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray center">Pink tulip crochet headband</p>
+                            <h6 class="charcoal bold-text left">₦ 5000</h6> <br>
+                        </div>
+                        <div class="card-action">
+                            <a class=" blush-pink-text bold-text" href="view_product.php?product_id=42">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l4 hide-on-med-and-down">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="./img/Beaded_Bowknot_Beige_Rosette_Design_Hairclip.jpeg" alt="" class="responsive-img">
+                        </div>
+                        <div class="card-content">
+                        <p class="warm-gray center">Bowknot Beige Rosette Hairclip</p>
+                            <h6 class="charcoal bold-text left">₦ 3000</h6> <br>
+                        </div>
+                        <div class="card-action">
+                            <a class=" blush-pink-text bold-text" href="view_product.php?product_id=47">Order Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col l4 s6">
-                <div class="card hoverable large">
-                    <div class="card-image">
-                        <img src="./img/pink-bracelet-3.jpeg" alt="" class="responsive-img">
-                    </div>
-                    <div class="card-content">
-                    <p class=" warm-gray">Marble design teal bracelet without charms and with </p>
-                        <h6 class=" charcoal bold-text left">N 1500</h6> <br>
-                    </div>
-                    <div class="card-action">
-                        <a class=" blush-pink-text bold-text" href="">Order Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col l4 s6">
-                <div class="card hoverable large">
-                    <div class="card-image">
-                        <img src="./img/pink-bracelet-2.jpg" alt="" class="responsive-img">
-                    </div>
-                    <div class="card-content">
-                    <p class="warm-gray">Marble design teal bracelet without charms and with </p>
-                        <h6 class=" charcoal bold-text left">N 1500</h6> <br>
-                    </div>
-                    <div class="card-action">
-                        <a class="blush-pink-text bold-text" href="">Order Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
 
         <div class="container divider"></div>
