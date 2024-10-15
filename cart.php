@@ -8,22 +8,27 @@ $product_id = "";
 $error_msg = "";
 $user_id = "";
 $quantity = 1;
+$carts = '';
 
-$select_query = "SELECT * FROM `cart`";
 
-$send_query = mysqli_query($db_connect, $select_query);
-
-$carts = mysqli_fetch_all($send_query, MYSQLI_ASSOC);
-$user_id = $_SESSION['user_id'];
-$error_msg = "";
+if(isset($_SESSION['user_id'])){
+    $user_id = $_SESSION['user_id'];
+    echo $user_id;
+    
+    $select_query = "SELECT * FROM `cart` WHERE `user_id` = '$user_id' ";
+    
+    $send_query = mysqli_query($db_connect, $select_query);
+    
+    $carts = mysqli_fetch_all($send_query, MYSQLI_ASSOC);
+    $user_id = $_SESSION['user_id'];
+    $error_msg = "";
+}
 
 // check if a particular user id is selected
 
 // echo $_GET['user_id'];
 
 
-
-echo isset($_POST['quantity']);
 ?>
 
 <style>
@@ -92,7 +97,6 @@ echo isset($_POST['quantity']);
                         $total_price = 0;
                         foreach ($carts as $cart) {
                         $total_price += $cart['price'];
-                        $quantity += $cart['quantity'];
                         ?>
                         
                         <div class="cart-text outline z-depth-1">
