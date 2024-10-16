@@ -10,7 +10,8 @@ $error_msg = "";
 // check if a particular recipe id is selected
 if (isset($_GET['product_id'])) {
     $product_id = $_GET['product_id'];
-    // assign receipe id to the local variable
+
+    $user_id = $_SESSION['user_id'];
 
     // fetch data from the table using row id
     $fetch_query = "SELECT * FROM `products` WHERE `product_id` = $product_id";
@@ -36,9 +37,8 @@ if (isset($_POST['add_to_cart'])) {
 
         $item_description = $order['product_name'];
         $price = $order['price'];
-        $item_image = $order['img_name'] ;
 
-        $insert_query = "INSERT INTO `cart` (`item_description`, `price`, `item_image`) VALUES ('$item_description','$price','$item_image')";
+        $insert_query = "INSERT INTO `cart` (`item_description`, `price`, `user_id`) VALUES ('$item_description','$price','$user_id')";
         $insert_result = mysqli_query($db_connect, $insert_query);
 
         if ($insert_result) {

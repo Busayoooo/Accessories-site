@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 03, 2024 at 04:54 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost
+-- Generation Time: Oct 16, 2024 at 01:26 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `chic_charms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `order_id` int(10) NOT NULL,
+  `item_description` varchar(255) NOT NULL,
+  `price` int(10) NOT NULL,
+  `user_id` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`order_id`, `item_description`, `price`, `user_id`) VALUES
+(1, 'Brown and beige bracelet with gold accent.', 2000, 8),
+(2, 'Brown and beige bracelet with gold accent.', 2000, 8),
+(3, 'Brown and beige bracelet with gold accent.', 2000, 7);
 
 -- --------------------------------------------------------
 
@@ -77,7 +99,7 @@ INSERT INTO `login_tb` (`user_id`, `username`, `password`, `email`, `first_name`
 (4, '', 'busayo22', 'abassalex49@gmail.com', 'Favour ', 'Abass ', '2024-09-24 18:06:20'),
 (5, '', 'busayo22', 'Busayo@gmial.com', '', '', '2024-09-24 18:08:20'),
 (6, '', 'busayo22', 'Busayo@gmail.com', '', '', '2024-09-24 18:09:03'),
-(7, '', 'busayo22', 'ilovelome@il.com', '', '', '2024-09-24 18:18:49'),
+(7, 'Lome', 'busayo22', 'ilovelome@il.com', '', '', '2024-10-15 23:18:34'),
 (8, 'Busayo', 'busayo22', 'abassalex49@gmail.com', 'Favour ', 'Abass ', '2024-09-24 19:54:20');
 
 -- --------------------------------------------------------
@@ -134,6 +156,12 @@ INSERT INTO `reviews` (`review_id`, `first_name`, `last_name`, `phone_number`, `
 --
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`order_id`);
+
+--
 -- Indexes for table `custom_pieces`
 --
 ALTER TABLE `custom_pieces`
@@ -160,6 +188,12 @@ ALTER TABLE `reviews`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `custom_pieces`
